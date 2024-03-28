@@ -13,25 +13,37 @@ const collectEmployees = function() {
       lastName: '',
       salary: 0,
     }
+    
     employee.firstName = prompt("Please enter employee first name", '');
+
     if (!employee.firstName) {
-      window.alert("Please enter a valid first name!");
-    } else {
-      employee.lastName = prompt("Please enter employee last name", '');
-
-      if (!employee.lastName) {
-        window.alert("Please enter a valid last name");
-      } else {
-        employee.salary = Number(prompt("Please enter employee salary", ''));
-
-        if(isNaN(employee.salary || !employee.salary)) {
-          window.alert("Please enter valid salary!");
-        } else {
-          employeeArray.push(employee);
-          addEmployee = confirm("Do you want to add another employee?")
-        }
+      while(!employee.firstName) {
+        window.alert("Please enter a valid first name!");
+        employee.firstName = prompt("Please enter employee first name", '');
       }
     }
+
+    employee.lastName = prompt("Please enter employee last name", '');
+
+    if (!employee.lastName) {
+      while (!employee.lastName) {
+        window.alert("Please enter a valid last name");
+        employee.lastName = prompt("Please enter employee last name", '');
+      } 
+    }
+
+    employee.salary = prompt("Please enter employee salary", '');
+
+      if(isNaN(employee.salary)) {
+          while(isNaN(employee.salary)) {
+            window.alert("Please enter valid salary!");
+            employee.salary = prompt("Please enter employee salary", '');
+          }
+        }
+
+      employee.salary = Number(employee.salary);
+      employeeArray.push(employee);
+      addEmployee = confirm("Do you want to add another employee?")
   }
 
   return employeeArray;
@@ -57,9 +69,6 @@ const displayAverageSalary = function(employeesArray) {
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   let randNum = Math.floor(Math.random() * employeesArray.length);
-  console.log(employeesArray.length);
-  console.log(randNum);
-  console.log(employeesArray[randNum]);
   console.log(`Congratulations to ${employeesArray[randNum].firstName} ` +
   `${employeesArray[randNum].lastName} for being the employee of the day!`);
 }
