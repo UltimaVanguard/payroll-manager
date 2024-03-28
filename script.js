@@ -13,7 +13,7 @@ const collectEmployees = function() {
       lastName: '',
       salary: 0,
     }
-    
+
     employee.firstName = prompt("Please enter employee first name", '');
 
     if (!employee.firstName) {
@@ -53,8 +53,8 @@ const collectEmployees = function() {
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
   let totalEmployees = 0;
-  let totalSalary = 0.00;
-  let averageSalary = 0.00;
+  let totalSalary = 0;
+  let averageSalary = 0;
 
   for (i = 0; i < employeesArray.length; i++) {
     totalEmployees++;
@@ -62,7 +62,7 @@ const displayAverageSalary = function(employeesArray) {
   };
 
   averageSalary = totalSalary / totalEmployees;
-  console.log(`The average salary for our ${totalEmployees} employees is $${averageSalary}`);
+  console.log(`The average salary for our ${totalEmployees} employees is $${averageSalary.toFixed(2)}`);
 }
 
 // Select a random employee
