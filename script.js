@@ -6,7 +6,7 @@ const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   const employeeArray = [];
   let addEmployee = true
-
+  //Loops until they cancel the adding another employee prompt
   while(addEmployee) {
     let employee = {
       firstName: '',
@@ -15,7 +15,7 @@ const collectEmployees = function() {
     }
 
     employee.firstName = prompt("Please enter employee first name", '');
-
+    // loops until they enter a valid first name
     if (!employee.firstName) {
       while(!employee.firstName) {
         window.alert("Please enter a valid first name!");
@@ -25,6 +25,7 @@ const collectEmployees = function() {
 
     employee.lastName = prompt("Please enter employee last name", '');
 
+    // loops until they enter a valid last name
     if (!employee.lastName) {
       while (!employee.lastName) {
         window.alert("Please enter a valid last name");
@@ -34,12 +35,13 @@ const collectEmployees = function() {
 
     employee.salary = prompt("Please enter employee salary", '');
 
-      if(isNaN(employee.salary)) {
-          while(isNaN(employee.salary)) {
-            window.alert("Please enter valid salary!");
-            employee.salary = prompt("Please enter employee salary", '');
-          }
+    // loops until they enter a valid salary
+    if(isNaN(employee.salary)) {
+        while(isNaN(employee.salary)) {
+          window.alert("Please enter valid salary!");
+          employee.salary = prompt("Please enter employee salary", '');
         }
+      }
 
       employee.salary = Number(employee.salary);
       employeeArray.push(employee);
@@ -56,6 +58,7 @@ const displayAverageSalary = function(employeesArray) {
   let totalSalary = 0;
   let averageSalary = 0;
 
+  // loops through the array collecting all salaries and totals them together
   for (i = 0; i < employeesArray.length; i++) {
     totalEmployees++;
     totalSalary = totalSalary + employeesArray[i].salary;
