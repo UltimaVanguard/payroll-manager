@@ -18,15 +18,17 @@ At the last prompt, clicking okay will let you add another employee and clicking
 
 If you go into the console you can see how many employees you have and their average salary. It will also pick out a random employee as the employee of the day.
 
-![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/assets/first-name.png)
+![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/Assets/first-name.png)
 
-![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/assets/last-name.png)
+![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/Assets/last-name.png)
 
-![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/assets/salary.png)
+![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/Assets/salary.png)
 
-![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/assets/data.png)
+![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/Assets/add-another.png)
 
-![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/assets/console.png)
+![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/Assets/data.png)
+
+![alt text](https://github.com/UltimaVanguard/payroll-manager/blob/main/Assets/console.png)
 
 ## Credits
 
